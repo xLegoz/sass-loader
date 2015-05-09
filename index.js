@@ -36,6 +36,7 @@ module.exports = function (content) {
         // this value is (currently) ignored by libsass when using the data input instead of file input
         // however, it is still necessary for correct relative paths in result.map.sources
         opt.sourceMap = this.options.output.path + '/sass.map';
+        opt.omitSourceMapUrl = true;
     }
 
     var loadPaths = opt.includePaths;
